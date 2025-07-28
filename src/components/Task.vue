@@ -21,6 +21,10 @@
             <button>Watch netflix</button>
             <button><i class="far fa-trash-alt"></i></button>
           </li>
+          <li>
+            <button>Read books</button>
+            <button><i class="far fa-trash-alt"></i></button>
+          </li>
         </ul>
       </div>
       <!-- buttons -->
