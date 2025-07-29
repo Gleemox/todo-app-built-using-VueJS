@@ -13,8 +13,8 @@
       <!-- task lists -->
       <div class="taskItems">
         <ul>
-          <li>
-            <button>Learn Vue JS</button>
+          <li v-for="task in tasks" :key="task.id">
+            <button>{{task.title}}</button>
             <button><i class="far fa-trash-alt"></i></button>
           </li>
         </ul>
@@ -35,6 +35,6 @@
 <script>
 export default {
   name: "Task",
-  props:[''],
+  props:['tasks'],
 };
 </script>
