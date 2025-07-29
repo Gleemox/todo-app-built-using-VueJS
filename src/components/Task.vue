@@ -17,14 +17,6 @@
             <button>Learn Vue JS</button>
             <button><i class="far fa-trash-alt"></i></button>
           </li>
-          <li>
-            <button>Watch netflix</button>
-            <button><i class="far fa-trash-alt"></i></button>
-          </li>
-          <li>
-            <button>Read books</button>
-            <button><i class="far fa-trash-alt"></i></button>
-          </li>
         </ul>
       </div>
       <!-- buttons -->
@@ -43,5 +35,6 @@
 <script>
 export default {
   name: "Task",
+  props:[''],
 };
 </script>
