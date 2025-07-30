@@ -26,7 +26,7 @@
       </div>
       <!-- pending task -->
       <div class="pendingTasks">
-        <span>Pending Tasks: </span>
+        <span>Pending Tasks: {{incomplete}} </span>
       </div>
     </div>
   </div>
@@ -36,6 +36,11 @@
 export default {
   name: "Task",
   props:['tasks'],
+  computed: {
+  incomplete(){
+  return this.tasks.filter(this.inProgress).length;
+  }
+  },
   methods: { 
   inProgress(task){
   return !this.isCompleted(task);
