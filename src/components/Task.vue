@@ -21,8 +21,8 @@
       </div>
       <!-- buttons -->
       <div class="clearBtns">
-        <button>Clear completed</button>
-        <button @click="clearAll">Clear all</button>
+        <button @click="clearCompleted">Clear completed</button>
+        <button @click="clearAll">Clear all</button> <!-- when clear all button is clicked on execute clearAll method--> 
       </div>
       <!-- pending task -->
       <div class="pendingTasks">
@@ -37,6 +37,15 @@ export default {
   name: "Task",
   props:['tasks'],
   methods: { 
+  inProgress(task){
+  return !this.isCompleted(task);
+  },
+  isCompleted(task){
+  return task.completed;
+  },
+  clearCompleted(){
+  this.tasks = this.tasks.filter(this.inProgress);
+  },
   clearAll(){ /*add clear method to remove all tasks*/
   this.tasks = [];
   }
