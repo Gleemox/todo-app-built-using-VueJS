@@ -13,6 +13,7 @@
       <!-- task lists -->
       <div class="taskItems">
         <ul>
+        <task-item></task-item>
           <li v-for="task in tasks" :key="task.id">
             <button><i class="far fa-circle"></i> {{task.title}}</button>
             <button><i class="far fa-trash-alt"></i></button>
@@ -33,9 +34,13 @@
 </template>
 
 <script>
+import TaskItem from './Task-item';
 export default {
   name: "Task",
   props:['tasks'],
+  components:{
+  TaskItem
+  },
   computed: {
   incomplete(){
   return this.tasks.filter(this.inProgress).length;
