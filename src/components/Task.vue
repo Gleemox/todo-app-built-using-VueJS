@@ -16,7 +16,8 @@
         <task-item v-bind:task="task"
          v-for="(task,index) in tasks"
           :key="task.id"
-          @remove="removeTask(index)"></task-item>
+          @remove="removeTask(index)"
+          @complete="completeTask(task)"></task-item>
         </ul>
       </div>
       <!-- buttons -->
@@ -70,6 +71,9 @@ export default {
   removeTask(index){
   this.tasks.splice(index, 1); /* remove one item */
   },
+  completeTask(task){
+  task.completed = !task.completed;
+  }
 },
 };
 </script>
