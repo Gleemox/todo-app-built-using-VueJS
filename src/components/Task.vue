@@ -47,7 +47,8 @@ export default {
   this.tasks.push({
   title: this.newTask,
   completed: false
-  })
+  });
+  this.newTask="";
   }
   },
   inProgress(task){
