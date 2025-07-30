@@ -1,7 +1,7 @@
-# Todo application built using VueJS
+# Todo application built using Vue.js
 
 ## Description
-This project is a todo application built using VueJS.
+This project is a todo application built using Vue.js.
 
 ## Features
 - Add a new task.
