@@ -7,8 +7,8 @@
       </div>
       <!-- form -->
       <div class="form">
-        <input type="text" placeholder="New Task" />
-        <button><i class="fas fa-plus"></i></button>
+        <input type="text" placeholder="New Task" v-model="newTask"/>
+        <button @click="addTask"><i class="fas fa-plus"></i></button>
       </div>
       <!-- task lists -->
       <div class="taskItems">
@@ -42,6 +42,14 @@ export default {
   }
   },
   methods: { 
+  addTask(){
+  if(this.newTask){
+  this.tasks.push({
+  title: this.newTask,
+  completed: false
+  })
+  }
+  },
   inProgress(task){
   return !this.isCompleted(task);
   },
