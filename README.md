@@ -10,3 +10,6 @@ This project is a todo application built using Vue.js.
 - Clear all tasks.
 - Clear completed tasks.
 - View the number of pending tasks.
+
+## Usage
+- Access the application through your browser at http://localhost:8000/
