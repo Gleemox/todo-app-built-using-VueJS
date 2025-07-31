@@ -12,4 +12,4 @@ This project is a todo application built using Vue.js.
 - View the number of pending tasks.
 
 ## Usage
-- Access the application through your browser at http://localhost:8000/
+- Access the application through your browser at http://localhost:8080/
